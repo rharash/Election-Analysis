@@ -4,7 +4,7 @@ import os
 # Assign a variable to load a file from a path.
 file_to_load = os.path.join("Resources/election_results.csv")
 # Assign a variable to save the file to a path.
-file_to_save = os.path.join("analysis", "election_analysis.txt")
+file_to_save = os.path.join("analysis", "election_analysis1.txt")
 # Initialize a total vote counter.
 total_votes = 0
 # Candidate options and candidate votes.
@@ -114,9 +114,8 @@ with open(file_to_save, "w") as txt_file:
         f"------------------------------------------\n")
     print(winning_county_summary)
     #######################
-    # Save the winning county's results to the text file.
+    # Save the winning candidate's results to the text file.
     txt_file.write(winning_county_summary)
-    ###########################################
     for candidate in candidate_votes:
         # Retrieve vote count and percentage.
         votes = candidate_votes[candidate]
